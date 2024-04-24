@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7f6bb7;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #675794;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #664daa;
+  border-radius: 2px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #fff;
+  flex-direction: column;
+  background: url(../assets/bg.jpg);
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: #d6d0d0;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.glass_panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 90vh;
+  min-width: 40rem;
+  padding: 2rem 2rem 0 3rem;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border-radius: 20px;
+  box-shadow: 3px 8px 108px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+.card_row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 940px) {
+  .card_row {
+    width: 37rem;
+  }
+}
+
+.buranodoors {
+  position: relative;
+  width: 16rem;
+  height: 22rem;
+  background-image: url(../assets/buranodoors.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 11.5rem;
+  margin-top: 1rem;
+  opacity: 0.9;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+  transition: transform 500ms ease;
+}
+.buranodoors:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.buranodoors:hover .buranodoors-content {
+  transform: translateY(-7%);
+}
+.buranodoors:hover .buranodoors-description::after {
+  transform: scaleX(1);
+}
+.buranodoors-like {
+  position: absolute;
+  background: url(../assets/icon-heart.svg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 1.2rem;
+  right: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+.buranodoors-like:hover, .buranodoors-like:focus {
+  filter: invert(27%) sepia(70%) saturate(7472%) hue-rotate(339deg) brightness(86%) contrast(100%);
+}
+.buranodoors-content {
+  padding: 1rem 1.2rem 1.2rem 1.2rem;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2) 10%, black);
+  height: 11.3rem;
+  transition: transform 600ms ease;
+  transform: translateY(49%);
+}
+.buranodoors-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.1rem;
+}
+.buranodoors-location {
+  position: relative;
+  width: max-content;
+  font-size: 0.6rem;
+  padding-bottom: 1.5rem;
+}
+.buranodoors-views {
+  cursor: pointer;
+  display: inline;
+  position: absolute;
+  top: calc(1.2rem * 1.2);
+  right: calc(1.2rem * 3.6);
+  text-decoration: none;
+  color: #fff;
+  background-color: #e20d0d;
+  padding: 0rem 0.8rem;
+  border-radius: 0.8rem;
+  border: none;
+  font-size: 0.7rem;
+}
+.buranodoors-views:hover, .buranodoors-views:focus {
+  background-color: #fff;
+  color: black;
+}
+.buranodoors-description {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+.buranodoors-description::after {
+  content: "";
+  left: 1.2rem;
+  top: calc(1.2rem * 3.9);
+  position: absolute;
+  height: 0.25rem;
+  width: 86%;
+  background: #e20d0d;
+  transform: scaleX(1.2);
+  transition: transform 600ms ease;
+}
+
+.toledo {
+  position: relative;
+  width: 25rem;
+  height: 14rem;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  transition: transform 600ms ease;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+}
+.toledo:hover {
+  transform: scale(1.05);
+}
+.toledo:hover .toledo-stat {
+  transform: translateY(0%);
+}
+.toledo:hover .toledo-img {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.toledo:hover .toledo-img__load {
+  transform: scale(1.2, 1.2);
+}
+.toledo-country {
+  position: absolute;
+  cursor: pointer;
+  top: 1.2rem;
+  right: 1.2rem;
+  color: #fff;
+  background-color: dodgerblue;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  border: none;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.7rem;
+}
+.toledo-country:hover, .toledo-country:focus {
+  background-color: #fff;
+  color: black;
+}
+.toledo-stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.2rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background: #fff;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(10px);
+  transition: transform 600ms ease;
+  transform: translateY(-99%);
+}
+.toledo-img {
+  width: 25rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  transition: 600ms ease;
+  overflow: hidden;
+}
+.toledo-img__load {
+  width: 25rem;
+  height: 14rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+  transition: 600ms ease;
+  object-fit: cover;
+}
+.toledo-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2253f2;
+}
+.toledo-description {
+  margin-top: 0.3rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.8rem;
+  word-break: break-all;
+  width: 100%;
+  color: #18191a;
+}
+.toledo-like {
+  background: url(../assets/icon-heart.svg) no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1.2rem;
+  margin-right: calc(1.2rem * 0.2);
+  top: 1.2rem;
+  right: 1.2rem;
+  filter: invert(37%) sepia(3%) saturate(17%) hue-rotate(346deg) brightness(94%) contrast(82%);
+  border: none;
+  cursor: pointer;
+}
+.toledo-like:hover, .toledo-like:focus {
+  filter: invert(27%) sepia(70%) saturate(7472%) hue-rotate(339deg) brightness(86%) contrast(100%);
+}
+
+.florence {
+  width: 30rem;
+  height: 16.8rem;
+  perspective: 50rem;
+  transition: 600ms ease;
+  transform-style: preserve-3d;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.florence:hover {
+  transform: scale(1.2);
+}
+.florence:hover .florence-front {
+  transform: rotateY(180deg);
+}
+.florence:hover .florence-back {
+  transform: rotateY(360deg);
+}
+.florence-front {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 16.8rem;
+  padding-top: calc(1.2rem * 10);
+  margin: 1rem;
+  border-radius: 0.5rem;
+  z-index: 2;
+  background: url(../assets/florence.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 600ms ease;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+}
+.florence-country {
+  position: absolute;
+  cursor: pointer;
+  top: 1.2rem;
+  right: 1.2rem;
+  background-color: #fff;
+  color: black;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.2rem;
+  border: none;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.7rem;
+}
+.florence-country:hover, .florence-country:focus {
+  color: #fff;
+  background-color: dodgerblue;
+}
+.florence-stat {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.2rem 1.2rem;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  backdrop-filter: blur(8px);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 120px rgba(0, 0, 0, 0.4);
+}
+.florence-data {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  color: dodgerblue;
+}
+.florence-title {
+  font-size: calc(1.1rem * 1.2);
+  font-weight: 500;
+  color: #fff;
+}
+.florence-more {
+  cursor: pointer;
+  color: #fff;
+  background-color: dodgerblue;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.8rem;
+  border: none;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right, #4a47d1, #046bfd);
+}
+.florence-more:hover, .florence-more:focus {
+  background-color: #fff;
+  color: black;
+}
+.florence-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 16.8rem;
+  padding-top: 12rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 600ms ease;
+  box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
+}
+.florence-video > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.florence-video > button {
+  position: absolute;
+  top: 80%;
+  left: 15%;
+  width: 3rem;
+  height: 3rem;
+  transform: translate(-70%, -40%);
+  z-index: 2;
+  border-radius: 50%;
+  border: none;
+  color: transparent;
+  background: none;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.florence-video img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.venice {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  width: 34rem;
+  height: 22rem;
+  margin: 1rem;
+  margin-left: 3rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  background: rgba(251, 250, 250, 0.3);
+  backdrop-filter: blur(12px);
+  transition: 300ms ease;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.venice:hover {
+  transform: scale(1.1);
+}
+.venice-stat {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: calc(1.2rem * 1.6);
+}
+.venice-img {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  height: 100%;
+}
+.venice-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 400ms ease-in-out;
+}
+.venice-img img:hover {
+  transform: scale(1.2);
+}
+.venice-country {
+  position: relative;
+}
+.venice-country__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  color: #fff;
+  background-color: dodgerblue;
+  padding: 0.45rem 0.85rem;
+  border-radius: 0.8rem;
+  border: none;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.7rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(to right bottom, #6d5fdc, #f870c1);
+}
+.venice-date {
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.venice-title {
+  font-size: calc(1.1rem * 1.2);
+  font-weight: calc(500* 1.2);
+  color: black;
+}
+.venice-description {
+  margin-top: 0.2rem;
+  height: 13rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: black;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+.venice-more {
+  margin-top: 0.5rem;
+}
+.venice-more a {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  width: 5rem;
+  height: 1rem;
+  margin: 2rem 0;
+  font-size: calc(0.7rem * 1.1);
+  color: #7f6bb7;
+  text-decoration: none;
+  transition: 500ms ease-in-out;
+}
+.venice-more a:hover {
+  color: #fff;
+}
+.venice-more a:hover:before {
+  width: 130%;
+}
+.venice-more a:before {
+  content: "";
+  position: absolute;
+  top: -0.12rem;
+  left: -1rem;
+  width: 0%;
+  height: 110%;
+  background: url(../assets/view_btn.png) no-repeat;
+  background-size: cover;
+  transform-origin: left;
+  transition: 400ms ease-in;
+}
+.venice-more a span {
+  position: relative;
+  z-index: 1;
+}
+
+.wave-ocean {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: url(../assets/wave_01.png);
+  background-size: 100rem 12rem;
+  animation: waving 20s linear infinite;
+  z-index: 0;
+  opacity: 1;
+  animation-delay: 0s;
+}
+
+.wave-blue {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 11rem;
+  background: url(../assets/wave_02.png);
+  background-size: 100rem 12rem;
+  animation: waving 15s linear infinite;
+  animation-direction: reverse;
+  z-index: -1;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 0.1rem;
+}
+
+@keyframes waving {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 300rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

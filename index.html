@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Card</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  </head>
+
+  <body>
+    <div class="glass_panel">
+      <section class="card_row">
+        <div class="toledo">
+          <div class="toledo-img">
+            <img class="toledo-img__load" src="assets/Toledo2.jpg" />
+          </div>
+          <button class="toledo-country">SPAIN</button>
+          <div class="toledo-stat">
+            <div class="toledo-content">
+              <h2 class="toledo-title">Toledo, Spain</h2>
+              <p class="toledo-description">Ex nostrud duis in irure.</p>
+            </div>
+            <button class="toledo-like"></button>
+          </div>
+        </div>
+        <div class="florence">
+          <div class="florence-front">
+            <button class="florence-country">ITALY</button>
+            <div class="florence-stat">
+              <div class="florence-content">
+                <p class="florence-data">November 2017</p>
+                <h2 class="florence-title">Florence, Italy</h2>
+              </div>
+              <button class="florence-more">View Trip</button>
+            </div>
+          </div>
+          <div class="florence-back">
+            <div class="florence-video">
+              <video autoplay muted loop id="florence-video__load">
+                <source src="assets/fr-video.mp4" type="video/mp4" />
+              </video>
+              <button id="florence-video-btn" onclick="playVideo()">
+                <img
+                  id="florence-video-btn__img"
+                  src="assets/pause.png"
+                  alt="play-button"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="card_row">
+        <div class="buranodoors">
+          <button class="buranodoors-like"></button>
+          <div class="buranodoors-content">
+            <h2 class="buranodoors-title">Burano Doors</h2>
+            <button class="buranodoors-views">16</button>
+            <p class="buranodoors-location">Burano, Venice, Italy</p>
+            <p class="buranodoors-description">
+              Ex nostrud duis in irure. Consectetur minim id fugiat
+              reprehenderit dolor voluptate pariatur veniam irure aliquip. Sint
+              ipsum enim veniam reprehenderit.
+            </p>
+          </div>
+        </div>
+        <div class="venice">
+          <div class="venice-stat">
+            <div class="venice-country">
+              <button class="venice-country__btn">ITALY</button>
+            </div>
+            <p class="venice-date">November 2017</p>
+            <h2 class="venice-title">Venice Islands</h2>
+            <p class="venice-description">
+              Venice is a city in northeastern Italy and the capital of the
+              Veneto region. It is sited on a group of 117 small islands that
+              are separated by canals and linked by bridges. These are located
+              in the marshy Venetian Lagoon which stretches along the shoreline,
+              between the mouths of the Po and the Piave Rivers.
+            </p>
+            <div class="venice-more">
+              <a href="#"><span>View Trip ➔</span> </a>
+            </div>
+          </div>
+          <div class="venice-img">
+            <img src="assets/Venice.png" alt="Venice" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="bkgd_animations">
+      <div class="wave-ocean"></div>
+      <div class="wave-blue"></div>
+    </div>
+    <script>
+      var videoLoad = document.getElementById("florence-video__load");
+      var videoBtn = document.getElementById("florence-video-btn");
+      var buttonImg = document.getElementById("florence-video-btn__img");
+      function playVideo() {
+        if (videoLoad.paused) {
+          videoLoad.play();
+          buttonImg.src = "assets/pause.png";
+        } else {
+          videoLoad.pause();
+          buttonImg.src = "assets/play.png";
+        }
+      }
+    </script>
+  </body>
+</html>
