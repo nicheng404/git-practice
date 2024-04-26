@@ -11,3 +11,5 @@ Commit standard (example)):
 branch Standard:
 
     [prefix]:[task name]-[task description]-[ticket-number]
+
+???
